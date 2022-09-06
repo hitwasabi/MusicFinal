@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9000000"
+    tools:context=".SongActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Tên Bài Hát"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgCD"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tvLyrics"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:text="Lời Bài Hát"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tvTimeRun"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+                <SeekBar
+                    android:id="@+id/sbMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"/>
+                <TextView
+                    android:id="@+id/tvTimeAll"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="5dp"
+                >
+                //img skip
+                <ImageView
+                    android:onClick="playBefore"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="20dp"
+                    android:rotation="180"
+                    app:tint="#fff"
+                    android:src="@drawable/next"/>
+                <ImageView
+                    android:id="@+id/imgPlay"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="20dp"
+                    app:tint="#fff"
+                    android:src="@drawable/play"/>
+
+                <ImageView
+                    android:onClick="playAfter"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="20dp"
+                    app:tint="#fff"
+                    android:src="@drawable/next"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
